@@ -1,0 +1,99 @@
+.NameEnterContainer {
+    border: none !important;
+    outline: none !important;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%) scale(1.5);
+
+    width: max-content;
+}
+
+body {
+
+    background-image: url("NameEnterWallpaper.gif");
+    background-size: 50%;
+    
+    background-position: center;
+    background-attachment: fixed;
+    background-color: #f8c2c2;
+}
+
+
+.heart-box {
+    width: 100%;
+    max-width: 500px;
+    min-width: 80px;
+
+
+}
+
+.heart {
+    display: block;
+    width: 100%;
+    height: auto;
+    fill: #ff6b9a;
+    filter: drop-shadow(0px 0px 10px rgba(255, 0, 80, 0.7));
+}
+
+
+.starting-btn {
+    display: block;
+    width: 100%;
+    margin-top: 20px;
+
+    text-align: center;
+    color: #ff6b9a;
+    font-size: 20px;
+    font-weight: bold;
+
+    text-shadow: 0 0 20px #ff6b9a;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.heart-gif {
+    position: absolute;
+    /* top: 25%;
+    left: 50%; */
+    transform: translate(-50%, calc(-50% - 15px));
+    overflow: hidden;
+
+    width: 100px;
+    height: 100px;
+
+    background-image: url("/hug-milk.gif");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 2;
+
+
+}
+
+.nameEnterBtn{
+    border: none;
+    border-radius: 10px;
+
+    padding: 20px;
+
+    background-color: #ff6b9a;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+    .nameEnterBtn:hover{
+        scale: 1.1;  
+        box-shadow: 0 0 20px #ff6b9a;
+        color: aliceblue;
+    }
