@@ -11,7 +11,9 @@ function LinkGenerator() {
             return;
         }
 
-        const url = `${window.location.origin}/wish?name=${encodeURIComponent(name.trim())}`;
+        const expiryTime = Date.now() + 30 * 60 * 1000;
+
+    const url = `${window.location.origin}/wish?name=${encodeURIComponent(name.trim())}&expires=${expiryTime}`;
 
         setLink(url);
     };

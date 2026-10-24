@@ -1,7 +1,11 @@
 
 import { useState, useEffect } from "react";
+import BirthdayWish2 from "./BirthdayWish2";
 
 function BirthdayWish1() {
+
+
+
     const [show, setShow] = useState(true);
 
     useEffect(() => {
@@ -11,6 +15,18 @@ function BirthdayWish1() {
 
         return () => clearTimeout(timer);
     }, []);
+
+
+
+    const params = new URLSearchParams(window.location.search);
+
+    const name = params.get("name");
+    const expires = Number(params.get("expires"));
+
+    if (!expires || Date.now() >= expires) {
+        return <h1>This link has expired! ❤️</h1>;
+    }
+
 
     return (
         <div>
@@ -60,6 +76,11 @@ function BirthdayWish1() {
                 </div>
 
             )}
+
+
+
+
+            {!show && <BirthdayWish2 name={name} />}
 
 
         </div>
