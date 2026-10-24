@@ -11,7 +11,7 @@ function BirthdayWish1() {
     useEffect(() => {
         const timer = setTimeout(() => {
             setShow(false);
-        }, 15000);
+        }, 1000);
 
         return () => clearTimeout(timer);
     }, []);

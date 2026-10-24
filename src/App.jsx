@@ -2,10 +2,14 @@
 import NameEnter from "./pages/NameEnter";
 import LinkGenerator from "./pages/LinkGenerator";
 import { Routes, Route } from "react-router-dom";
-import WishPage1 from "./pages/WishPage1";
-import BirthdayWishAll from "./pages/BirthdayWishAll";
 
-function App() {  
+import BirthdayWishAll from "./pages/BirthdayWishAll";
+import BirthdayGift from "./pages/BirthdayWish2";
+import "./App.css"
+import BirthdayWish3 from "./pages/BirthdayWish3";
+import PurposePage1 from "./pages/PurposePage1";
+
+function App() {
   return (
     <>
 
@@ -14,6 +18,9 @@ function App() {
         <Route path="/" element={<NameEnter />} />
         <Route path="/generateLink" element={<LinkGenerator />} />
           <Route path="/wish" element={<BirthdayWishAll />} />
+        <Route path="/BirthdayWish3" element={<BirthdayWish3 />} />
+        <Route path="/purposePage" element={<PurposePage1 />} />
+
       </Routes>
     </>
   )

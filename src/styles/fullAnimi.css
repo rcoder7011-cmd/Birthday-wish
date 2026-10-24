@@ -1,0 +1,339 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #58313c;
+  background: #fff8f5;
+  font-synthesis: none;
+}
+
+html, body, #root {
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+}
+
+button {
+  font: inherit;
+}
+
+.gift-app {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  min-height: 580px;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 17% 32%, rgba(255, 223, 210, .54), transparent 38%),
+    radial-gradient(ellipse at 82% 70%, rgba(255, 220, 229, .46), transparent 42%),
+    #fff9f6;
+}
+
+.ambient {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  filter: blur(65px);
+  opacity: .42;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.ambient-one {
+  background: #ffd1dc;
+  top: -130px;
+  right: -60px;
+}
+
+.ambient-two {
+  background: #ffe2ce;
+  bottom: -160px;
+  left: -80px;
+}
+
+.intro-screen {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px 20px;
+  z-index: 2;
+}
+
+.intro-copy {
+  margin-bottom: 26px;
+}
+
+.tiny-label, .title-kicker {
+  font-size: 10px;
+  letter-spacing: .28em;
+  font-weight: 600;
+}
+
+.tiny-label {
+  color: #c77c8e;
+}
+
+.intro-copy h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(30px, 5vw, 46px);
+  line-height: 1.16;
+  font-weight: 500;
+  letter-spacing: -.035em;
+  margin: 17px 0 12px;
+  color: #754351;
+}
+
+.intro-copy p {
+  font-size: 13px;
+  color: #b1848c;
+  letter-spacing: .035em;
+}
+
+.heart-button {
+  position: relative;
+  width: 126px;
+  height: 126px;
+  border: 0;
+  padding: 12px;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.heart-button:focus-visible {
+  outline: 2px solid #d94f7b;
+  outline-offset: 8px;
+}
+
+.intro-heart {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 10px 16px rgba(195, 48, 94, .25));
+}
+
+.heart-glow {
+  position: absolute;
+  inset: 8px;
+  border-radius: 50%;
+  background: #f4779a;
+  filter: blur(24px);
+  opacity: .42;
+}
+
+.pink-transition {
+  position: absolute;
+  z-index: 4;
+  width: max(180vw, 180vh);
+  aspect-ratio: 1;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  background: radial-gradient(circle at 30% 25%, #fa80a6 0%, #ed4e81 42%, #bf285c 100%);
+  pointer-events: none;
+}
+
+.title-screen {
+  position: absolute;
+  z-index: 5;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: #fff8f7;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  background:
+    radial-gradient(ellipse at 25% 25%, rgba(255, 170, 194, .3), transparent 38%),
+    linear-gradient(125deg, #c62d61 0%, #e8477b 53%, #b92256 100%);
+}
+
+.title-content {
+  padding: 24px;
+}
+
+.title-kicker {
+  color: rgba(255, 241, 245, .82);
+  margin-bottom: 26px;
+}
+
+.title-content h2 {
+  display: flex;
+  flex-direction: column;
+  font-family: "Playfair Display", serif;
+  font-size: clamp(62px, 12vw, 112px);
+  line-height: .92;
+  letter-spacing: -.065em;
+  font-weight: 600;
+  margin: 0;
+  perspective: 600px;
+}
+
+.title-line {
+  display: block;
+}
+
+.title-underline {
+  display: block;
+  width: 76px;
+  height: 1px;
+  margin: 27px auto 17px;
+  background: rgba(255, 235, 241, .75);
+  transform-origin: center;
+}
+
+.title-small {
+  color: rgba(255, 241, 245, .88);
+  font-size: 12px;
+  letter-spacing: .05em;
+}
+
+.tree-screen {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 22px 16px 18px;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  background:
+    radial-gradient(ellipse at 15% 25%, rgba(255, 222, 204, .55), transparent 40%),
+    radial-gradient(ellipse at 80% 66%, rgba(255, 218, 229, .5), transparent 45%),
+    #fffaf7;
+}
+
+.tree-heading {
+  margin: 0;
+  color: #bd8794;
+  text-transform: uppercase;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .26em;
+}
+
+.tree-art {
+  width: min(94vw, 510px);
+  height: min(54vh, 450px);
+  min-height: 290px;
+  margin-top: 2px;
+}
+
+.tree-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.draw-path {
+  fill: none;
+  stroke: #4b3030;
+  stroke-width: 3.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+
+.tree-branch {
+  stroke-width: 2.35;
+}
+
+.blossom {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+  filter: drop-shadow(0 1px 1px rgba(130, 39, 68, .12));
+}
+
+.birthday-script {
+  font-family: "Sacramento", cursive;
+  color: #c63f6d;
+  font-size: clamp(46px, 8vw, 72px);
+  line-height: .9;
+  margin-top: -4px;
+  text-shadow: 0 3px 12px rgba(198, 63, 109, .08);
+}
+
+.tree-subtitle {
+  font-size: 11px;
+  letter-spacing: .04em;
+  color: #b1848c;
+  margin: 12px 0 0;
+}
+
+.footer-note {
+  position: absolute;
+  bottom: 18px;
+  font-size: 8px;
+  letter-spacing: .3em;
+  color: #c8a0a6;
+}
+
+.replay-button {
+  position: absolute;
+  bottom: 43px;
+  border: 1px solid rgba(198, 63, 109, .35);
+  border-radius: 99px;
+  background: rgba(255, 255, 255, .6);
+  color: #b53d65;
+  padding: 9px 16px;
+  font-size: 11px;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+}
+
+.replay-button:hover {
+  background: #fff;
+}
+
+@media (max-height: 680px) {
+  .intro-copy {
+    margin-bottom: 10px;
+  }
+
+  .intro-copy h1 {
+    font-size: 32px;
+    margin: 10px 0;
+  }
+
+  .heart-button {
+    width: 104px;
+    height: 104px;
+  }
+
+  .tree-art {
+    height: 47vh;
+    min-height: 250px;
+  }
+
+  .birthday-script {
+    font-size: 48px;
+  }
+
+  .tree-subtitle {
+    margin-top: 7px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+  }
+}
