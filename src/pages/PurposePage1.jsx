@@ -1,11 +1,15 @@
 import React from "react";
+import { useState } from "react";
 import "../styles/WishPage1.css";
+import { useNavigate } from "react-router-dom";
 
 function WishPage1() {
+    const [show ,setShow]=useState(false);
+    const Navigate=useNavigate();
 
     const yesHandle = () => {
-        alert("Thank you for saying yes!");
-        // navigate("/wish2");
+       setShow(true);
+       Navigate("/purposePage2");
     }
 
 
@@ -21,9 +25,12 @@ function WishPage1() {
 
 
             <section className="container">
+                <div className="YesNo">
+                    <img src="./images/crybaby.gif" />
+                </div>
 
                 <div className="Wish1Container">
-                   <h2 style={{textAlign:"center"}}> <pre>If you love me click on yes <br></br>
+                   <h2 style={{textAlign:"center",marginTop:"250px"}}> <pre>If you love me click on yes <br></br>
                else <br></br>
          click No    
                     </pre> 
