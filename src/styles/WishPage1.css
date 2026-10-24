@@ -1,0 +1,72 @@
+
+ .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+ }
+
+
+ .btns{
+   
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:30px;
+    margin-top: 120px;
+    
+}
+
+
+h2{
+
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: bold;
+    color: #620c27;
+    text-shadow: 0 0 20px #ff6b9a;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    text-align: center;
+    
+}
+
+.yesBtn,
+.noBtn {
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+.Wish1Container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    
+
+}
+
+.noBtn:hover{
+    
+    
+    box-shadow: 0 0 10px #ff6b9a;
+    cursor: pointer;
+    transform: translateX(100px);
+}
+
+.yesBtn:hover{
+    box-shadow: 0 0 10px #ff6b9a;
+    cursor: pointer;
+   transform: scale(1.2);
+}

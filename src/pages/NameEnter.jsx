@@ -16,9 +16,9 @@ function NameEnter() {
 
                 <button className="nameEnterBtn" onClick={() => navigate("/generateLink") }>Let's Impress her/him</button>
 
-                <h2 className="starting-btn">
+                {/* <h2 className="starting-btn">
                     Click on the heart to enter in her Dil
-                </h2>
+                </h2> */}
             </div>
         </section>
     );

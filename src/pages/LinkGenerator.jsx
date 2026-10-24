@@ -16,10 +16,17 @@ function LinkGenerator() {
         setLink(url);
     };
 
-    const copyLink = async () => {
+   
+    
+const copyLink = async () => {
+    try {
         await navigator.clipboard.writeText(link);
         alert("Link copied!");
-    };
+    } catch (error) {
+        alert("Unable to copy the link. Please copy it manually.");
+    }
+};
+
 
     return (
         <>
